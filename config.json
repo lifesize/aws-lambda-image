@@ -1,6 +1,6 @@
 {
   "userEndpoint": "https://datauser-int.us-west-1.elasticbeanstalk.com/user?ID",
-  "bucket": "your-destination-bucket",
+  "bucket": "lifesizecloud-int-imagestore",
   "reduce": {
       "directory": "reduced",
       "quality": 90
