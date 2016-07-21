@@ -62,9 +62,9 @@ exports.handler = (event, context) => {
         console.log("call to user with: " + JSON.stringify(options));
         // put to User service and tell lambda OK
         Request(options, function(err, resp, body) {
-            console.log("err: " + JSON.stringify(err));
-            console.log("resp: " + JSON.stringify(resp));
-            console.log("body: " + JSON.stringify(body));
+            if (err) console.log("err: " + JSON.stringify(err));
+            if (resp) console.log("resp: " + JSON.stringify(resp));
+            if (body) console.log("body: " + JSON.stringify(body));
             context.succeed("OK");
         });
     })
@@ -80,6 +80,9 @@ exports.handler = (event, context) => {
             console.log("call to user with: " + JSON.stringify(options));
             //send error message to User service and tell lambda FAIL
             Request(options, function(err, resp, body) {
+                if (err) console.log("err: " + JSON.stringify(err));
+                if (resp) console.log("resp: " + JSON.stringify(resp));
+                if (body) console.log("body: " + JSON.stringify(body));
                 context.fail("FAIL");
             });
         }

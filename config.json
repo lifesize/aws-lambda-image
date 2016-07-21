@@ -1,5 +1,5 @@
 {
-  "userEndpoint": "https://datauser-int.us-west-1.elasticbeanstalk.com/user?ID",
+  "userEndpoint": "https://datauser.lifesizeclouddev.com/user?ID=",
   "bucket": "lifesizecloud-int-imagestore",
   "reduce": {
       "directory": "reduced",
