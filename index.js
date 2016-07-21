@@ -62,6 +62,9 @@ exports.handler = (event, context) => {
         console.log("call to user with: " + JSON.stringify(options));
         // put to User service and tell lambda OK
         Request(options, function(err, resp, body) {
+            console.log("err: " + JSON.stringify(err));
+            console.log("resp: " + JSON.stringify(resp));
+            console.log("body: " + JSON.stringify(body));
             context.succeed("OK");
         });
     })
